@@ -1,67 +1,48 @@
-#Wood Work Cost Estimator
+#Weather App Jeep Trails in Colorado
+
 
 ###Purpose:
 
-Provide an interface for customers seeking custom furniture that allows immediate and accurate estimates based on a variety of designs and materials. 
+Provide the user with up to date information on the current weather conditions of some of Colorado's most popular Jeep 4WD trails. This is done with hopes that the user will be able to make an educated decision on what supplies and accessories to bring and which to leave at home based on real time weather info/forecast and be prepared for the journey ahead.
 
-Key features will include - 
+Key features-
 
-1. selection gallery
-1. material choice
-1. custom dimension input and cost breakdown.
-1. Users will be able to share this estimate as well as submit it for approval.
+1. Selection Nav bar of 4WD Trails 
 
-###technology 
+2. Current Weather conditions of Trails
 
+3. Pictures of the trail/area 
+
+4. Recommendation on what to bring and expect based on current weather conditions 
+
+###Technology
+ 
 * HTML
 * CSS
 * JavaScript
 * jQuery
-* JSON
 * AJAX
-* HomeDepot API
-* Jasmine
+* JSON (not sure if necessary)
+* Weather API (TBD which one)
 
-###implementation
+###Implementation
+ 
+* Programming Style TBD (OOP or Functional)
 
-* OOP
-* Test Driven Development
+###Possible Difficulties
 
-###Wire Framing
+* Integrating data from API
 
-![white board mock up](./wire-frames.JPG)
+* Successfully doing an AJAX call for the first time 
 
-###Foreseen Difficulties:
+* Creating several pages
 
-* Integrating data from the API
-* Adjusting cost based on dimensions
-* rendering multiple pages
-* Allowing for finished estimate to be emailed/shared/submitted
+* Everything haha
 
 ###Stretch Goals
 
-* Easily Updatable by non-programmer
-* Price comparison with Lowes API
+* Using Instagram API to show pictures of trails
+ 
 
 
 
-
-
-
-#Personal Project
-##Weather App for the 7 most popular Jeep Trails in Colorado
-
-###Project Description
-	This app will be able to show the user the current weather conditions at the 7 most popular Jeep Trails in Colorado in order to prepare them for the journey ahead. 
-
-	Lizard Head Pass
-	Red Feather Lakes
-	Argentine Pass
-
-
-
-	According to http://www.colorado.com/articles/7-popular-colorado-atv-jeep-trails
-
-	It will enable the user to make inform decision on what jeep accesories to bring and which to leave at home such as tires chains, extra lights, removing doors and car top and such...
-
-###	 
