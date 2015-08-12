@@ -5,7 +5,22 @@
 	margin-right:25%;
 	text-align: center;
 	border: solid 2px black;
-	background-color: red;
+	background-color: lightblue;
 }
-	
+#dropdownMenu1 {
+	margin-top: 2.5%;
+	margin-left: 5%;
+	width: 33%;
+}
+ul.dropdown-menu {
+	margin-left: 70px;
+	width: 33%;
+	font-size: 1.5em;
+	text-align: left;
+	background-color: blue;
+	color: white;
+}
+body {
+	background-color: gray;
+}	
 	
