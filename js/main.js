@@ -2,6 +2,15 @@
 
 
         $(document).ready(function() {
+
+        	var temp;
+        	var temp1;
+        	var temp2;
+        	var temp3;
+        	var temp4;
+        	var temp5;
+        	var temp6;
+
           $.ajax({
           // get data from api.ipify.org
            url: "https://api.ipify.org",
@@ -11,19 +20,140 @@
               $("#ip-address").text(ipAddress);
             }
           });
-
+          // Button for Bear Basin Trail
           $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/weather?q=boulder,co&units=imperial",
+            url: "http://api.openweathermap.org/data/2.5/weather?q=Pagosa Springs,co&units=imperial",
             success: function(data) {
               $("#weather").text(" The current temperature is " + data.main.temp + " degrees");
-              var temp = data.main.temp.toFixed();
+              temp = data.main.temp.toFixed();
               console.log(temp);
             }
           });
 
-        $(".btn").on('click', function () {
-        	console.log('hello');
+        $(".btn1").on('click', function () {
+        	$('.temperature').html('');
+
+        	$('.temperature').append('The current temperature is ' + temp + "<span>&deg</span>");
+
+
+        	console.log(temp);
         });
+
+        // Button for Grand Junction Desert
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather?q=Grand Junction,co&units=imperial",
+            success: function(data) {
+              $("#weather").text(" The current temperature is " + data.main.temp + " degrees");
+              temp1 = data.main.temp.toFixed();
+              console.log(temp1);
+            }
+          });
+
+        $(".btn2").on('click', function () {
+        	$('.temperature').html('');
+
+        	$('.temperature').append('The current temperature is ' + temp1 + "<span>&deg</span>");
+
+
+        	console.log(temp1);
+        });
+
+        // Button for Shrine Pass
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather?q=Red Cliff,co&units=imperial",
+            success: function(data) {
+              $("#weather").text(" The current temperature is " + data.main.temp + " degrees");
+              temp2 = data.main.temp.toFixed();
+              console.log(temp2);
+            }
+          });
+
+        $(".btn3").on('click', function () {
+        	$('.temperature').html('');
+
+        	$('.temperature').append('The current temperature is ' + temp2 + "<span>&deg</span>");
+
+
+        	console.log(temp2);
+        });
+
+        // Button for Grizzly Jeep Trail
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather?q=Eagle,co&units=imperial",
+            success: function(data) {
+              $("#weather").text(" The current temperature is " + data.main.temp + " degrees");
+              temp3 = data.main.temp.toFixed();
+              console.log(temp3);
+            }
+          });
+
+        $(".btn4").on('click', function () {
+        	$('.temperature').html('');
+
+        	$('.temperature').append('The current temperature is ' + temp3 + "<span>&deg</span>");
+
+
+        	console.log(temp3);
+        });
+        
+
+        // Button for Bald Mountain
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather?q=Fort Collins,co&units=imperial",
+            success: function(data) {
+              $("#weather").text(" The current temperature is " + data.main.temp + " degrees");
+              temp4 = data.main.temp.toFixed();
+              console.log(temp4);
+            }
+          });
+
+        $(".btn5").on('click', function () {
+        	$('.temperature').html('');
+
+        	$('.temperature').append('The current temperature is ' + temp4 + "<span>&deg</span>");
+
+
+        	console.log(temp4);
+        });
+
+        // Button for Devil's Canyon
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather?q=Idaho Springs,co&units=imperial",
+            success: function(data) {
+              $("#weather").text(" The current temperature is " + data.main.temp + " degrees");
+              temp5 = data.main.temp.toFixed();
+              console.log(temp5);
+            }
+          });
+
+        $(".btn6").on('click', function () {
+        	$('.temperature').html('');
+
+        	$('.temperature').append('The current temperature is ' + temp5 + "<span>&deg</span>");
+
+
+        	console.log(temp5);
+        });
+
+        // Button for Phantom Canyon
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather?q=Canon City,co&units=imperial",
+            success: function(data) {
+              $("#weather").text(" The current temperature is " + data.main.temp + " degrees");
+              temp6 = data.main.temp.toFixed();
+              console.log(temp6);
+            }
+          });
+
+        $(".btn7").on('click', function () {
+        	$('.temperature').html('');
+
+        	$('.temperature').append('The current temperature is ' + temp6 + "<span>&deg</span>");
+
+
+        	console.log(temp6);
+        });
+
     
 	});//document ready
 
