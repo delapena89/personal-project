@@ -11,24 +11,39 @@ function gettingWeatherInfo (location) {
 		if (temp<120 && temp>100) {
 			$('.list').append('It is too hot...go to the pool!');
 		}
-		else if (temp<99 && temp>80) {
-			$('.list').append('it is a great day');
+		else if (temp<100 && temp>80) {
+			$('.list').append('<p>Recommendations:</p><br>');
+			$('.list').append('<p>-Take the top of your car</p><br>');
+			$('.list').append('<p>-Extra snacks and water</p><br>');
+			$('.list').append('<p>-GPS and CB Radio</p><br>');
+			$('.list').append('<p>-Shovel and Hatchet</p><br>');
+			$('.list').append('<p>-Tire Jack</p><br>');
+			$('.list').append('<p>-Fire Extiguisher</p><br>');
+			$('.list').append('<p>-Suncreen</p><br>');
 		}
-		else if (temp<79 && temp>60 && list === 'moderate rain') {
-			$('.list').append('<p>it is a perfect day</p> <br>');
-			$('.list').append('<p>bring an umbrella</p>');
+		else if (temp<80 && temp>60) {
+			$('.list').append('<p>Recommendations:</p><br>');
+			$('.list').append('<p>-Suncreen</p><br>');
+			$('.list').append('<p>-Take the roof of your car</p><br>');
+			$('.list').append('<p>-Light Jackets and hats:</p><br>');
+			$('.list').append('<p>-Extra snacks and water</p><br>');
+			$('.list').append('<p>-Shovel and Hatchet</p><br>');
+			$('.list').append('<p>-Fire Extiguisher</p><br>');
+			$('.list').append('<p>-Tire Jack</p><br>');
 		}
-		else if (temp<59 && temp>40) {
-			$('.list').append('you should stay home, it is kinda chilly');
+		else if (temp<60 && temp>40) {
+			$('.list').append('<p>Recommendations:</p><br>');
+			$('.list').append('<p>-You should bring:</p><br>');
+			$('.list').append('<p>-You should bring:</p><br>');
 		}
-		else if (temp<39 && temp>20) {
-			$('.list').append('too cold man, do something else...go skiing or something');
+		else if (temp<40 && temp>20) {
+			$('.list').append('<p>Too cold, do something else...go skiing!</p>');
 		}
-		else if (temp<19 && temp>0) {
-			$('.list').append('Im not even going to waste my time telling you why this is a bad idea...bring a couple jackets if you must');
+		else if (temp<20 && temp>0) {
+			$('.list').append('<p>Bring a jacket...</p>');
 		}
 		else if (temp<0 && temp>-20) {
-			$('.list').append('LEAVE THIS SITE!!!');
+			$('.list').append('<p>LEAVE THIS SITE!!!</p>');
 		}
 	});
 }
