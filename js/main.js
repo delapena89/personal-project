@@ -14,18 +14,21 @@ function gettingWeatherInfo (location) {
 		else if (temp<100 && temp>80) {
 			$('.list').append('<p>Recommendations:</p><br>');
 			$('.list').append('<p>-Take the top of your car</p><br>');
+			$('.list').append('<p>-Take the doors of</p><br>');
 			$('.list').append('<p>-Extra snacks and water</p><br>');
 			$('.list').append('<p>-GPS and CB Radio</p><br>');
 			$('.list').append('<p>-Shovel and Hatchet</p><br>');
 			$('.list').append('<p>-Tire Jack</p><br>');
 			$('.list').append('<p>-Fire Extiguisher</p><br>');
 			$('.list').append('<p>-Suncreen</p><br>');
+			$('.list').append('<p>-Umbrella</p><br>');
 		}
 		else if (temp<80 && temp>60) {
 			$('.list').append('<p>Recommendations:</p><br>');
 			$('.list').append('<p>-Suncreen</p><br>');
 			$('.list').append('<p>-Take the roof of your car</p><br>');
 			$('.list').append('<p>-Light Jackets and hats:</p><br>');
+			$('.list').append('<p>-Umbrella</p><br>');
 			$('.list').append('<p>-Extra snacks and water</p><br>');
 			$('.list').append('<p>-Shovel and Hatchet</p><br>');
 			$('.list').append('<p>-Fire Extiguisher</p><br>');
@@ -33,8 +36,12 @@ function gettingWeatherInfo (location) {
 		}
 		else if (temp<60 && temp>40) {
 			$('.list').append('<p>Recommendations:</p><br>');
-			$('.list').append('<p>-You should bring:</p><br>');
-			$('.list').append('<p>-You should bring:</p><br>');
+			$('.list').append('<p>-Jackets, gloves and hats</p><br>');
+			$('.list').append('<p>-Shovel and Hatchet</p><br>');
+			$('.list').append('<p>-GPS and Radio</p><br>');
+			$('.list').append('<p>-Suncreen</p><br>');
+			$('.list').append('<p>-Extra snacks and water</p><br>');
+			$('.list').append('<p>-Make sure your winch is working</p><br>');
 		}
 		else if (temp<40 && temp>20) {
 			$('.list').append('<p>Too cold, do something else...go skiing!</p>');
