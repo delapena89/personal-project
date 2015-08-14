@@ -61,5 +61,36 @@ body {
 	width:25%;
 	margin-left: 37%;
 }
+.textures {
+    float: right;
+    height: 50px;
+    width: 150px;
+    background: burlywood;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: -4%;
+    padding-top: 5px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+}
+.textures span {
+    height: 40px;
+    width: 40px;
+    background: forestgreen;
+    border-radius: 50%;
+    display: inline-block;
+    border: 5px solid white;
+}
+.textures span:hover {
+	cursor: pointer;
+}
+span.original {
+	background: url(http://s3-2.kiva.org/img/w800/298025.jpg) no-repeat;
+}
+span.second {
+	background: url(http://www.wallpaperup.com/uploads/wallpapers/2013/07/01/112331/big_thumb_44d0b33fe916a1d2aa90e498f6dfcb84.jpg) no-repeat;
+}
+.new-trail {
+	border: solid 1px black;
+}
 
 	
