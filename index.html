@@ -9,43 +9,64 @@
 
 </head>
 <body>
-  <h1 class='title'>Jeep Trail Weather App</h1> 
+  <div class="title-page">
+    <h1 class='title'>Jeep Trail Weather App</h1> 
+    <aside class="textures">
+      <span class="original"></span>
+      <span class="second"></span>
+    </aside>
+  </div>
 
-  <aside class="textures">
-    <span class="original"></span>
-    <span class="second"></span>
-  </aside>
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header" style="width: 100%">
+        <p class="navbar-brand">Pick your trail</p>
+        <button type="button" class='btn btn-default navbar-btn btn-primary' data-location="Pagosa Springs, CO">BEAR BASIN TRAIL</button>
+        <button type="button" class='btn btn-default navbar-btn btn-primary' data-location="Grand Junction, CO">GRAND JUNCTION DESERT</button>
+        <button type="button" class='btn btn-default navbar-btn btn-primary' data-location="Red CLiff, CO">SHRINE PASS</button>
+        <button type="button" class='btn btn-default navbar-btn btn-primary' data-location="Eagle, CO">GRIZZLY JEEP TRAIL</button>
+        <button type="button" class='btn btn-default navbar-btn btn-primary' data-location="Fort Collins, CO">BALD MOUNTAIN</button>
+        <button type="button" class='btn btn-default navbar-btn btn-primary' data-location="Idaho Springs, CO">DEVIL'S CANYON</button>
+        <button type="button" class='btn btn-default navbar-btn btn-primary' data-location="Canon City, CO">PHANTOM CANYON</button>
+        <form class="navbar-form navbar-right" role="search">
+        <div class="form-group new-trail">
+        <h4 class='more'>Enter  a trail you want to do</h4>
+            <input type="text" class="test form-control" placeholder="Enter City, State">
+          </div>
+          <button type="submit" class="search btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+      <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+        <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+        <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+        <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+        <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+        <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+        <div class="col-md-4"><img src="http://www.jeepforum.com/forum/attachments/f59/647943d1374257384t-gunmetal-blue-jeeps-7662b7eb-649a-4883-a45e-f293e8b63e42-10454-00000961496c5b51.jpg"></div>
+      </div>
+
+    </div>
+          <div class="col-md-6">
+      <h2 class='temperature'></h2>
+      <h3 class='list'></h3>
+    </div>
+  </div>
 
 
-  
-
-
-
-
-<!--       <ul class="nav nav-pills">
--->        <!-- <button type="button">CHOOSE A TRAIL</button> -->
-<button type="button" class='btn btn-default' data-location="Pagosa Springs, CO">BEAR BASIN TRAIL</button>
-<button type="button" class='btn btn-default' data-location="Grand Junction, CO">GRAND JUNCTION DESERT</button>
-<button type="button" class='btn btn-default' data-location="Red CLiff, CO">SHRINE PASS</button>
-<button type="button" class='btn btn-default' data-location="Eagle, CO">GRIZZLY JEEP TRAIL</button>
-<button type="button" class='btn btn-default' data-location="Fort Collins, CO">BALD MOUNTAIN</button>
-<button type="button" class='btn btn-default' data-location="Idaho Springs, CO">DEVIL'S CANYON</button>
-<button type="button" class='btn btn-default' data-location="Canon City, CO">PHANTOM CANYON</button>
-<!-- <button type="button">CHOOSE A TRAIL</button> -->
-<!--       </ul>
--->
-<div class="new-trail"> 
-  <h3 class='more'>Don't see a trail you like, enter  a trail you want to do</h3>  
-  <input class="test" type="text" name="lastname" placeholder="Enter the nearest city (city,state) of the 4WD Trail you want">
-  <br><br>
-  <input class="search" type="submit" value="Submit">
-</div>
-
-<!-- <input class="text" placeholder="Enter a 4WD Trail... nearest city and state"> -->
-
-
-<h2 class='temperature'></h2>
-<h3 class='list'></h3>
 
 
 <script src="https://code.jquery.com/jquery-2.1.4.js" type="text/javascript"></script>

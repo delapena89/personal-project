@@ -7,7 +7,7 @@ function gettingWeatherInfo (location) {
 	.done(function(data) {
 		var temp = data.main.temp;
 		var list = data.weather[0].description;
-		$('.temperature').append('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
+		$('.temperature').html('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
 		if (temp<120 && temp>100) {
 			$('.list').append('It is too hot...go to the pool!');
 		}
@@ -63,7 +63,7 @@ function gettingWeatherInfo (location) {
 		var list = data.weather[0].description;
 		console.log(temp);
 		console.log(list);
-		$('.temperature').append('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
+		$('.temperature').html('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
 		if (temp<120 && temp>100) {
 			$('.list').append('It is too hot...go to the pool!');
 		}
@@ -125,17 +125,20 @@ $(document).ready(function() {
 	var select = trail[0].value;
 	$('.temperature').html('');
 	$('.list').html('');
-	console.log(enterTrail(select));
-	console.log(select);	
+	enterTrail(select);
+	// console.log(data.list	)
+	// console.log(select);	
 	});
 	$('.original').on('click',function(e) {
 		// e.preventDefault();
 		console.log('hello');
-		$('body').css('background', 'url("http://s3-2.kiva.org/img/w800/298025.jpg")', "no-repeat;");
+		$('body').css('background-color', '#0044cc');
+		$('.title-page').css('background', 'url("http://s3-2.kiva.org/img/w800/298025.jpg")', "no-repeat;");
 	});
 	$('.second').on('click',function(e) {
 		e.preventDefault();
-		$('body').css('background', 'url("http://www.wallpaperup.com/uploads/wallpapers/2013/07/01/112331/big_thumb_44d0b33fe916a1d2aa90e498f6dfcb84.jpg")', "no-repeat;");
+		$('body').css('background-color', 'yellow');
+		$('.title-page').css('background', 'url("http://www.wallpaperup.com/uploads/wallpapers/2013/07/01/112331/big_thumb_44d0b33fe916a1d2aa90e498f6dfcb84.jpg")', "no-repeat;");
 	});
 
 
