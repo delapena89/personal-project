@@ -7,7 +7,7 @@ function gettingWeatherInfo (location) {
 	.done(function(data) {
 		var temp = data.main.temp;
 		var list = data.weather[0].description;
-		$('.temperature').html('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
+		$('.temperature').append('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
 		if (temp<120 && temp>100) {
 			$('.list').append('It is too hot...go to the pool!');
 		}
@@ -61,8 +61,8 @@ function gettingWeatherInfo (location) {
 	.done(function(data) {
 		var temp = data.main.temp;
 		var list = data.weather[0].description;
-		console.log(temp);
-		console.log(list);
+		// console.log(temp);
+		// console.log(list);
 		$('.temperature').html('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
 		if (temp<120 && temp>100) {
 			$('.list').append('It is too hot...go to the pool!');
@@ -120,13 +120,14 @@ $(document).ready(function() {
 		$('.list').html('');
 		gettingWeatherInfo(location);
 	});
-	$(".search").on('click', function() {	
+	$(".search").on('click', function(e) {	
+	e.preventDefault();
 	var trail = document.getElementsByClassName('test');
 	var select = trail[0].value;
 	$('.temperature').html('');
 	$('.list').html('');
 	enterTrail(select);
-	// console.log(data.list	)
+	// console.log(data.list)
 	// console.log(select);	
 	});
 	$('.original').on('click',function(e) {
