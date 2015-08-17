@@ -156,12 +156,12 @@ $(document).ready(function() {
 		console.log(select);
 		$('.temperature').html('');
 		$('.list').html('');
-		var hashtagSearch = "jeeps";	
-			console.log(hashtagSearch);
-			(img).html('');
-		printImages(hashtagSearch);
+		$('.row1').html('');
 		console.log(select);
 	 	enterTrail(select);
+		var hashtagSearch = "jeeps";	
+			console.log(hashtagSearch);
+		printImages(hashtagSearch);	
 	// console.log(data.list)
 	// console.log(select);	
 
@@ -171,10 +171,12 @@ $(document).ready(function() {
 		var location = this.dataset.location;
 		$('.temperature').html('');
 		$('.list').html('');
+		$('.row1').html('');
 		gettingWeatherInfo(location);
 		var hashtagSearch = "jeeps";	
 			console.log(hashtagSearch);
 		printImages(hashtagSearch);
+
 	});
 
 		// $('.photo').on('click', function () {
