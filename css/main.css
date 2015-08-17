@@ -42,13 +42,13 @@ ul.dropdown-menu {
 .temperature {
 	font-size: 2.5em;
 	text-align: center;
-	color: yellow;
-	text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+	color: white;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 .list {
-	color: yellow;
+	color: white;
 	text-align: center;
-	text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .textures {
@@ -87,8 +87,10 @@ span.second {
 	margin-top: -20px;
 }
 img {
-	height: 150px;
-	width: 150px;
+	height: 225px;
+	width: 225px;
+	padding-right: 5%;
+	padding-bottom: 5%;
 }
 #search {
 	margin-left: 0%;

@@ -6,9 +6,9 @@ function gettingWeatherInfo (location) {
 	})
 	.done(function(data) {
 		var temp = data.main.temp;
-		console.log(temp)
+		console.log(temp);
 		var list = data.weather[0].description;
-		console.log(list)
+		console.log(list);
 		
 
 		$('.temperature').append('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
@@ -117,6 +117,35 @@ function gettingWeatherInfo (location) {
 	});
 }	
 
+function printImages(hashtagSearch) {
+	var searchUrl = "https://api.instagram.com/v1/tags/" + hashtagSearch + "/media/recent";
+	var array = [];
+	var output;
+
+	$.ajax({
+		url: searchUrl,
+		type: 'GET',
+		data: {client_id:'61f8b631abd34732a3bcd8c73d0d73a9'},
+		dataType:'jsonp',
+		success:function(data){
+			console.log(data);
+		for (var i = 0; i <= 8; i++) {	
+    	output = data.data[i].images.low_resolution;
+    	array.push(output);
+    	}
+    	for (var j = 0; j<array.length; j++) {
+    		$('.row1').append('<img src=' + array[j].url + '>');
+    	}
+ 	
+
+    		
+  //   	$('.row').append('<img src="' + output + '"/>');
+		// });
+    	}
+    
+});
+
+}
 
 
 $(document).ready(function() {
@@ -127,24 +156,34 @@ $(document).ready(function() {
 		console.log(select);
 		$('.temperature').html('');
 		$('.list').html('');
-		console.log(select)
-
-
-
+		var hashtagSearch = "jeeps";	
+			console.log(hashtagSearch);
+			(img).html('');
+		printImages(hashtagSearch);
+		console.log(select);
 	 	enterTrail(select);
-	 
-
 	// console.log(data.list)
 	// console.log(select);	
+
 	});
 
 		$(".btn").on('click', function () {
-			debugger;
 		var location = this.dataset.location;
 		$('.temperature').html('');
 		$('.list').html('');
 		gettingWeatherInfo(location);
+		var hashtagSearch = "jeeps";	
+			console.log(hashtagSearch);
+		printImages(hashtagSearch);
 	});
+
+		// $('.photo').on('click', function () {
+		// var hashtagSearch = "jeeps";	
+		// 	console.log(hashtagSearch);
+		// printImages(hashtagSearch);
+		// });
+	});
+
 
 	$('.original').on('click',function(e) {
 		// e.preventDefault();
@@ -152,11 +191,13 @@ $(document).ready(function() {
 		$('body').css('background-color', '#228b22');
 		$('.title-page').css('background', 'url("http://s3-2.kiva.org/img/w800/298025.jpg")', "no-repeat;");
 	});
+
 	$('.second').on('click',function(e) {
 		e.preventDefault();
 		$('body').css('background-color', '#00BFFF');
 		$('.title-page').css('background', 'url("http://www.wallpaperup.com/uploads/wallpapers/2013/07/01/112331/big_thumb_44d0b33fe916a1d2aa90e498f6dfcb84.jpg")', "no-repeat;");
-	});
+	
+
 
 
 
