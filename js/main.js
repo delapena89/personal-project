@@ -149,12 +149,12 @@ $(document).ready(function() {
 	$('.original').on('click',function(e) {
 		// e.preventDefault();
 		console.log('hello');
-		$('body').css('background-color', '#0044cc');
+		$('body').css('background-color', '#228b22');
 		$('.title-page').css('background', 'url("http://s3-2.kiva.org/img/w800/298025.jpg")', "no-repeat;");
 	});
 	$('.second').on('click',function(e) {
 		e.preventDefault();
-		$('body').css('background-color', 'yellow');
+		$('body').css('background-color', '#00BFFF');
 		$('.title-page').css('background', 'url("http://www.wallpaperup.com/uploads/wallpapers/2013/07/01/112331/big_thumb_44d0b33fe916a1d2aa90e498f6dfcb84.jpg")', "no-repeat;");
 	});
 
