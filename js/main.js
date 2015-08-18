@@ -148,61 +148,57 @@ function printImages(hashtagSearch) {
 }
 
 
-$(document).ready(function() {
-	$("#search").on('click', function(e) {	
-		e.preventDefault();
-		var trail = document.getElementsByClassName('test');
-		var select = trail[0].value.toLowerCase();
-		console.log(select);
-		$('.temperature').html('');
-		$('.list').html('');
-		$('.row1').html('');
-		console.log(select);
-	 	enterTrail(select);
-		var hashtagSearch = "jeeps";	
-			console.log(hashtagSearch);
-		printImages(hashtagSearch);	
-	// console.log(data.list)
-	// console.log(select);	
+$(document).ready(function() {});//document ready
 
-	});
+$("#search").on('click', function(e) {	
+	e.preventDefault();
+	var trail = document.getElementsByClassName('test');
+	var select = trail[0].value.toLowerCase();
+	console.log(select);
+	$('.temperature').html('');
+	$('.list').html('');
+	$('.row1').html('');
+	console.log(select);
+ 	enterTrail(select);
+	var hashtagSearch = "jeeps";	
+		console.log(hashtagSearch);
+	printImages(hashtagSearch);	
+// console.log(data.list)
+// console.log(select);	
 
-		$(".btn").on('click', function () {
-		var location = this.dataset.location;
-		$('.temperature').html('');
-		$('.list').html('');
-		$('.row1').html('');
-		gettingWeatherInfo(location);
-		var hashtagSearch = "jeeps";	
-			console.log(hashtagSearch);
-		printImages(hashtagSearch);
+});
 
-	});
+$(".btn").on('click', function(e) {
+	e.preventDefault();
+	var location = this.dataset.location;
+	$('.temperature').html('');
+	$('.list').html('');
+	$('.row1').html('');
+	gettingWeatherInfo(location);
+	var hashtagSearch = "jeeps";	
+	console.log(hashtagSearch);
+	printImages(hashtagSearch);
+});
 
-		// $('.photo').on('click', function () {
-		// var hashtagSearch = "jeeps";	
-		// 	console.log(hashtagSearch);
-		// printImages(hashtagSearch);
-		// });
-	});
-
-
-	$('.original').on('click',function(e) {
-		// e.preventDefault();
-		console.log('hello');
-		$('body').css('background-color', '#228b22');
-		$('.title-page').css('background', 'url("http://s3-2.kiva.org/img/w800/298025.jpg")', "no-repeat;");
-	});
-
-	$('.second').on('click',function(e) {
-		e.preventDefault();
-		$('body').css('background-color', '#00BFFF');
-		$('.title-page').css('background', 'url("http://www.wallpaperup.com/uploads/wallpapers/2013/07/01/112331/big_thumb_44d0b33fe916a1d2aa90e498f6dfcb84.jpg")', "no-repeat;");
-	
+	// $('.photo').on('click', function () {
+	// var hashtagSearch = "jeeps";	
+	// 	console.log(hashtagSearch);
+	// printImages(hashtagSearch);
+	// });
 
 
 
+$('.original').on('click',function(e) {
+	e.preventDefault();
+	console.log('hello');
+	$('html').css('background-color', '#228b22');
+	$('.title-page').css('background', 'url("http://s3-2.kiva.org/img/w800/298025.jpg")', "no-repeat;");
+});
 
-	});//document ready
+$('.second').on('click',function(e) {
+	e.preventDefault();
+	$('html').css('background-color', '#00BFFF');
+	$('.title-page').css('background', 'url("http://www.wallpaperup.com/uploads/wallpapers/2013/07/01/112331/big_thumb_44d0b33fe916a1d2aa90e498f6dfcb84.jpg")', "no-repeat;");
 
+});
 
