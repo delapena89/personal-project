@@ -1,16 +1,16 @@
 // // add scripts
 
+
+// ajax call to open weather map api, giving me the temperature of one of the buttons when clicked
 function gettingWeatherInfo (location) {
 	$.ajax({
 		url: "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=imperial",
 	})
-	.done(function(data) {
+	.done (function(data) {
 		var temp = data.main.temp;
-		console.log(temp);
 		var list = data.weather[0].description;
-		console.log(list);
-		
 
+		// if statement showing what will get rendered based on the temperature range
 		$('.temperature').append('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
 		if (temp<120 && temp>100) {
 			$('.list').append('It is too hot...go to the pool!');
@@ -59,6 +59,7 @@ function gettingWeatherInfo (location) {
 	});
 }
 
+	// ajax call to open weather map api, giving me the temperature when input form is filled out
 	function enterTrail (select) {
 
 	$.ajax({
@@ -69,7 +70,7 @@ function gettingWeatherInfo (location) {
 		var list = data.weather[0].description;
 
 		$('.temperature').html('The current temperature is ' + temp + "<span>&deg</span>" + " and " + list);
-		
+
 		if (temp<120 && temp>100) {
 			$('.list').append('It is too hot...go to the pool!');
 		}
@@ -115,8 +116,9 @@ function gettingWeatherInfo (location) {
 			$('.list').append('<p>LEAVE THIS SITE!!!</p>');
 		}
 	});
-}	
+}
 
+// Function getting and appending the first 9 images of instagram with the #jeeps
 function printImages(hashtagSearch) {
 	var searchUrl = "https://api.instagram.com/v1/tags/" + hashtagSearch + "/media/recent";
 	var array = [];
@@ -128,29 +130,22 @@ function printImages(hashtagSearch) {
 		data: {client_id:'61f8b631abd34732a3bcd8c73d0d73a9'},
 		dataType:'jsonp',
 		success:function(data){
-			console.log(data);
-		for (var i = 0; i <= 8; i++) {	
+		for (var i = 0; i <= 8; i++) {
     	output = data.data[i].images.low_resolution;
     	array.push(output);
     	}
     	for (var j = 0; j<array.length; j++) {
     		$('.row1').append('<img src=' + array[j].url + '>');
     	}
- 	
-
-    		
-  //   	$('.row').append('<img src="' + output + '"/>');
-		// });
-    	}
-    
-});
-
+    }
+	});
 }
 
 
 $(document).ready(function() {});//document ready
 
-$("#search").on('click', function(e) {	
+// Click event for the input form for user to enter city, state they want
+$("#search").on('click', function(e) {
 	e.preventDefault();
 	var trail = document.getElementsByClassName('test');
 	var select = trail[0].value.toLowerCase();
@@ -160,14 +155,13 @@ $("#search").on('click', function(e) {
 	$('.row1').html('');
 	console.log(select);
  	enterTrail(select);
-	var hashtagSearch = "jeeps";	
+	var hashtagSearch = "jeeps";
 		console.log(hashtagSearch);
-	printImages(hashtagSearch);	
-// console.log(data.list)
-// console.log(select);	
+	printImages(hashtagSearch);
 
 });
 
+// Click event for the 7 button of the popular CO trails
 $(".btn").on('click', function(e) {
 	e.preventDefault();
 	var location = this.dataset.location;
@@ -175,19 +169,12 @@ $(".btn").on('click', function(e) {
 	$('.list').html('');
 	$('.row1').html('');
 	gettingWeatherInfo(location);
-	var hashtagSearch = "jeeps";	
+	var hashtagSearch = "jeeps";
 	console.log(hashtagSearch);
 	printImages(hashtagSearch);
 });
 
-	// $('.photo').on('click', function () {
-	// var hashtagSearch = "jeeps";	
-	// 	console.log(hashtagSearch);
-	// printImages(hashtagSearch);
-	// });
-
-
-
+// Click event for the original background, this one will be display upon loading the page
 $('.original').on('click',function(e) {
 	e.preventDefault();
 	console.log('hello');
@@ -195,6 +182,7 @@ $('.original').on('click',function(e) {
 	$('.title-page').css('background', 'url("http://s3-2.kiva.org/img/w800/298025.jpg")', "no-repeat;");
 });
 
+// Click even for the secondary background, this one will be display upon clicking the span with the color blue.
 $('.second').on('click',function(e) {
 	e.preventDefault();
 	$('html').css('background-color', '#00BFFF');
