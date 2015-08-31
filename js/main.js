@@ -136,8 +136,7 @@ function printImages(hashtagSearch) {
     	array.push(output);
     	}
     	shuffle(array,result);
-    	console.log(result);
-    	for (var j = 0; j<result.length - 7; j++) {
+      	for (var j = 0; j<result.length - 7; j++) {
     		$('.row1').append('<img src=' + result[j].url + '>');
     	}
     }
@@ -160,39 +159,34 @@ var shuffle = function(array, result) {
 $(document).ready(function() {});//document ready
 
 // Click event for the input form for user to enter city, state they want
-$("#search").on('click', function(e) {
-	e.preventDefault();
+$("#search").on('click', function(event) {
+	event.preventDefault();
 	var trail = document.getElementsByClassName('test');
 	var select = trail[0].value.toLowerCase();
-	console.log(select);
 	$('.temperature').html('');
 	$('.list').html('');
 	$('.row1').html('');
-	console.log(select);
  	enterTrail(select);
 	var hashtagSearch = "jeeps";
-		console.log(hashtagSearch);
 	printImages(hashtagSearch);
 
 });
 
 // Click event for the 7 button of the popular CO trails
-$(".btn").on('click', function(e) {
-	e.preventDefault();
+$(".btn").on('click', function(event) {
+	event.preventDefault();
 	var location = this.dataset.location;
 	$('.temperature').html('');
 	$('.list').html('');
 	$('.row1').html('');
 	gettingWeatherInfo(location);
 	var hashtagSearch = "jeeps";
-	console.log(hashtagSearch);
 	printImages(hashtagSearch);
 });
 
 // Click event for the original background, this one will be display upon loading the page
 $('.original').on('click',function(e) {
 	e.preventDefault();
-	console.log('hello');
 	$('html').css('background-color', '#228b22');
 	$('.title-page').css('background', 'url("http://s3-2.kiva.org/img/w800/298025.jpg")', "no-repeat;");
 });
