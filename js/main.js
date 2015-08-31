@@ -123,6 +123,7 @@ function printImages(hashtagSearch) {
 	var searchUrl = "https://api.instagram.com/v1/tags/" + hashtagSearch + "/media/recent";
 	var array = [];
 	var output;
+	var result = [];
 
 	$.ajax({
 		url: searchUrl,
@@ -130,16 +131,30 @@ function printImages(hashtagSearch) {
 		data: {client_id:'61f8b631abd34732a3bcd8c73d0d73a9'},
 		dataType:'jsonp',
 		success:function(data){
-		for (var i = 0; i <= 8; i++) {
+		for (var i = 0; i <= 15; i++) {
     	output = data.data[i].images.low_resolution;
     	array.push(output);
     	}
-    	for (var j = 0; j<array.length; j++) {
-    		$('.row1').append('<img src=' + array[j].url + '>');
+    	shuffle(array,result);
+    	console.log(result);
+    	for (var j = 0; j<result.length - 7; j++) {
+    		$('.row1').append('<img src=' + result[j].url + '>');
     	}
     }
 	});
 }
+
+
+var shuffle = function(array, result) {
+
+ // var workA = numA.slice(0);
+ while(array.length > 0) {
+   var random = Math.floor(Math.random() * array.length);
+   result.push(array.splice(random,1)[0]);
+ }
+ return result;
+};
+
 
 
 $(document).ready(function() {});//document ready
