@@ -145,8 +145,6 @@ function printImages(hashtagSearch) {
 
 
 var shuffle = function(array, result) {
-
- // var workA = numA.slice(0);
  while(array.length > 0) {
    var random = Math.floor(Math.random() * array.length);
    result.push(array.splice(random,1)[0]);
@@ -159,8 +157,8 @@ var shuffle = function(array, result) {
 $(document).ready(function() {});//document ready
 
 // Click event for the input form for user to enter city, state they want
-$("#search").on('click', function(event) {
-	event.preventDefault();
+$("#search").on('click', function(e) {
+	e.preventDefault();
 	var trail = document.getElementsByClassName('test');
 	var select = trail[0].value.toLowerCase();
 	$('.temperature').html('');
@@ -169,7 +167,6 @@ $("#search").on('click', function(event) {
  	enterTrail(select);
 	var hashtagSearch = "jeeps";
 	printImages(hashtagSearch);
-
 });
 
 // Click event for the 7 button of the popular CO trails
@@ -184,6 +181,7 @@ $(".btn").on('click', function(event) {
 	printImages(hashtagSearch);
 });
 
+
 // Click event for the original background, this one will be display upon loading the page
 $('.original').on('click',function(e) {
 	e.preventDefault();
@@ -196,6 +194,5 @@ $('.second').on('click',function(e) {
 	e.preventDefault();
 	$('html').css('background-color', '#00BFFF');
 	$('.title-page').css('background', 'url("http://www.wallpaperup.com/uploads/wallpapers/2013/07/01/112331/big_thumb_44d0b33fe916a1d2aa90e498f6dfcb84.jpg")', "no-repeat;");
-
 });
 

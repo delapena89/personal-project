@@ -1,4 +1,4 @@
-/* add custom styles */
+/*/* add custom styles */
 body {
 	background-color: #228b22;
 }
@@ -55,7 +55,7 @@ ul.dropdown-menu {
     float: right;
     height: 50px;
     width: 150px;
-   
+
     text-align: center;
     border-radius: 15px;
     margin-top: -4%;
@@ -107,9 +107,3 @@ img {
 .new-trail {
 	width: 100%;
 }
-
-
-
-
-
-
