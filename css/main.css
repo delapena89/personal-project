@@ -19,14 +19,6 @@ span.second {
 }
 
 .title {
-  /*
-    width: 50%;
-    margin-left: 25%;
-    margin-right:25%;
-    text-align: center;
-    border: solid 2px black;
-    background-color: lightblue;
-  */
   font-size: 2em;
   color: white;
 }
@@ -62,7 +54,6 @@ span.second {
   float: right;
   height: 50px;
   width: 150px;
-
   text-align: center;
   border-radius: 15px;
   margin-top: -4%;
@@ -73,7 +64,6 @@ span.second {
 .textures span {
   height: 40px;
   width: 40px;
-  background: forestgreen;
   border-radius: 50%;
   display: inline-block;
   border: 5px solid white;
