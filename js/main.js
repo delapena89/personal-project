@@ -51,7 +51,7 @@ $('.second').on('click',function(e) {
 // giving me the temperature of one of the buttons when clicked
 function gettingWeatherInfo (location) {
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=imperial",
+    url:"http://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=imperial&id=524901&APPID=4cb00bb1b8640e14c49ed099e2b96d6f",
   })
   .done (function(data) {
 
@@ -118,7 +118,10 @@ function gettingWeatherInfo (location) {
 // giving me the temperature when input form is filled out
 function enterTrail (select) {
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather?q=" + select + "&units=imperial",
+
+// "http://api.openweathermap.org/data/2.5/weather?q=" + select + "&units=imperial"
+
+    url: "http://api.openweathermap.org/data/2.5/weather?q=" + select + "&units=imperial&id=524901&APPID=4cb00bb1b8640e14c49ed099e2b96d6f",
   })
   .done(function(data) {
 
@@ -209,3 +212,9 @@ var shuffle = function(array, result) {
   }
   return result;
 };
+
+
+
+
+
+
